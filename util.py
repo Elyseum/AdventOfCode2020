@@ -30,3 +30,18 @@ def chunk(split, elements, include_split=False):
   if len(chunk_list) > 0:
     yield chunk_list
 
+
+### Grid stuff ###
+    
+def count_occurrences_grid(grid, value):
+  occurrences = 0
+  for x in range(0, len(grid)):
+    for y in range(0, len(grid[x])):
+      if grid[x][y] == value:
+        occurrences += 1
+  return occurrences
+
+def print_grid(grid):
+  for row in grid:
+    print(''.join(row))
+  print("")
